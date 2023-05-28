@@ -10,5 +10,16 @@ sudo docker run hello-world
 |---|---|
 | Afficher les conteneurs en cours d'exécution  |  sudo docker ps |
 | Afficher tous les conteneurs, y compris ceux qui ne sont pas en cours d'exécution.|  sudo docker ps -as |
-|   |   |
-|   |   |
+|  création image | docker build -t nomimage:version .  |
+|  lister mes images | sudo docker image ls  |
+|  lister history des commandes dans mon images | sudo docker history nomimage:version  |
+|permet de créer et de démarrer un nouveau conteneur Docker en utilisant une image spécifique et de lui donner un nom personnalisé.|sudo docker run -tid --name test nomimage:version|
+|se connecter à notre conteneur|sudo docker exec -ti test sh|
+|supprimer le conteneur (**absolument avant de supprimer l'image**)|sudo docker rm -f test|
+|supprimer l'image |sudo docker rmi nomimage:version|
+
+> **_NOTE:_  :pencil2:**  Remaks:
+
+>-tid: Ces options sont utilisées ensemble pour exécuter le conteneur en mode détaché (en arrière-plan) et fournir un accès interactif au terminal du conteneur. 
+
+>L'option -t associe le terminal à l'entrée standard du conteneur, tandis que l'option -i permet  
