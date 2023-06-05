@@ -15,6 +15,10 @@ sudo docker run hello-world
 |  lister history des commandes dans mon images | sudo docker history nomimage:version  |
 |permet de créer et de démarrer un nouveau conteneur Docker en utilisant une image spécifique et de lui donner un nom personnalisé.|sudo docker run -tid --name test nomimage:version|
 |se connecter à notre conteneur|sudo docker exec -ti test sh|
+|stoperun conteneur |sudo docker stop 3a73b3d8cc15 (container ID))|
+|loger dockerhub|sudo docker log|
+|tager l'image avant de pousser|sudo docker tag cpluscplus-ci-copy:v0 samibenelhajsalah/image-docker-hub|
+| push vers dockerhub| sudo docker push samibenelhajsalah/image-docker-hub|
 |supprimer le conteneur (**absolument avant de supprimer l'image**)|sudo docker rm -f test|
 |supprimer l'image |sudo docker rmi nomimage:version|
 
